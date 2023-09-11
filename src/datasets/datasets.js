@@ -1,10 +1,10 @@
 export const Links = [
     {
-        page: 'Dashboard',
+        page: 'Обо мне',
         link: '/'
     }, 
     {
-        page: 'Projects', 
+        page: 'Задача', 
         link: '/task'
     }
 ]

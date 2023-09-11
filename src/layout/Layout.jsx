@@ -1,15 +1,16 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Container, Box } from "@chakra-ui/react";
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
     return (
         <ChakraProvider>
-            <Navbar />
-            {children}
+            <Box minH="100vh" backgroundColor="twitter.100">
+                <Navbar />
+                <Container maxW="90%" paddingBlock="40px">{children}</Container>
+            </Box>
         </ChakraProvider>
     );
 };
-
 
 export default Layout;

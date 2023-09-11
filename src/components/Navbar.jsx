@@ -11,7 +11,8 @@ import {
     useColorModeValue,
     Stack,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, LinkIcon } from "@chakra-ui/icons";
+import mySelfie from "../assets/mySelfie.jpeg";
 
 import { NavLink } from "react-router-dom";
 
@@ -22,7 +23,7 @@ export default function Navbar() {
 
     return (
         <>
-            <Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
+            <Box bg="twitter.200" px={4}>
                 <Flex
                     h={16}
                     alignItems={"center"}
@@ -61,7 +62,7 @@ export default function Navbar() {
                             ))}
                         </HStack>
                     </HStack>
-                    <Flex alignItems={"center"}>
+                    <Flex alignItems={"center"} gap="30px">
                         <NavLink to="/">
                             <Button
                                 as={Button}
@@ -70,14 +71,16 @@ export default function Navbar() {
                                 cursor={"pointer"}
                                 minW={0}
                             >
-                                <Avatar
-                                    size={"sm"}
-                                    src={
-                                        "https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
-                                    }
-                                />
+                                <Avatar size={"sm"} src={mySelfie} />
                             </Button>
                         </NavLink>
+                        <Button
+                            rightIcon={<LinkIcon/>}
+                            colorScheme="teal"
+                            variant="outline"
+                        >
+                            GitHub
+                        </Button>
                     </Flex>
                 </Flex>
 
