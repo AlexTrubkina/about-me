@@ -75,9 +75,11 @@ export default function Navbar() {
                             </Button>
                         </NavLink>
                         <Button
+                            as={"a"}
                             rightIcon={<LinkIcon/>}
                             colorScheme="teal"
                             variant="outline"
+                            href="https://github.com/AlexTrubkina/about-me"
                         >
                             GitHub
                         </Button>
